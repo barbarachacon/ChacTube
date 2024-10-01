@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ChacTube</title>
+</head>
+
+<body>
+    <header>
+        <h1>ChacTube</h1>
+    </header>
+
+    <div class="video-container">
+        <iframe 
+            class="video" 
+            src="https://www.youtube.com/embed/YDXOioU_OKM" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="sidebar">
+        <div class="thumbnail" onclick="changeVideo('MkA3sLyEWdU')">
+            <img src="https://img.youtube.com/vi/MkA3sLyEWdU/hqdefault.jpg" alt="Vídeo 1">
+            <p>Shortfilm - CODA</p>
+        </div>
+        <div class="thumbnail" onclick="changeVideo('r_3_8xaDoSw')">
+            <img src="https://img.youtube.com/vi/r_3_8xaDoSw/hqdefault.jpg" alt="Vídeo 2">
+            <p>Shortfilm - WATER LILY</p>
+        </div>
+        <div class="thumbnail" onclick="changeVideo('F1QRZki3zb8')">
+            <img src="https://img.youtube.com/vi/F1QRZki3zb8/hqdefault.jpg" alt="Vídeo 3">
+            <p>Shortfilm - Resilience</p>
+        </div>
+    </div>
+    
+
+    <script>
+        function changeVideo(videoId) {
+            const iframe = document.querySelector('.video');
+            iframe.src = `https://www.youtube.com/embed/${videoId}`;
+        }
+    </script>
+
+</body>
+</html>
